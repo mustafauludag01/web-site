@@ -1,6 +1,7 @@
 const parallax_el = document.querySelectorAll(".parallax");
 const ust_puller = document.querySelectorAll(".ust-puller");
 const alt_puller = document.querySelectorAll(".alt-puller");
+const main = document.querySelector("main");
 
 let xValue=0, yValue=0;
 update(0);
@@ -11,6 +12,13 @@ window.addEventListener("mousemove",(e)=>{
     update(e.clientX);
     
 });
+
+if(window.innerWidth>=725){
+    main.style.maxHeight = `${window.innerWidth * 0.6}px`;
+}
+else{
+    main.style.maxHeight = `${window.innerWidth * 1.6}px`;
+}
 
 function update(cursorPosition){
     parallax_el.forEach((el) => {
@@ -36,14 +44,11 @@ function update(cursorPosition){
 
 //GSAP
 
-let timeline = gsap.timeline();
+/*let timeline = gsap.timeline();
 
 parallax_el.forEach((el)=>{
     timeline.from(el,{
         top: `${el.offsetHeight / 2 + +el.dataset.distance}px`,
         duration:1,
     });
-});
-
-
-    
+});*/
