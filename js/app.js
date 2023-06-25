@@ -35,20 +35,20 @@ else{
 function handleScroll(scrollval){
     parallax_el.forEach((el) => {
         if(el.alt == "ust-puller"){
-            ust_puller_speedx = el.dataset.speedx*10;
-            ust_puller_speedy = el.dataset.speedy*10;
+            ust_puller_speedx = el.dataset.speedx*2;
+            ust_puller_speedy = el.dataset.speedy*2;
             el.style.transform = `translateX(calc(-50% + ${-scrollval * ust_puller_speedx}px)) translateY(calc(-50% + ${-scrollval * ust_puller_speedy}px`;
             //el.style.transform = `translateX(calc(-50% + ${-xValue * ust_puller_speedx}px)) translateY(calc(-50% + ${-xValue * ust_puller_speedy}px`;
         }
         else if(el.alt == "alt-puller"){
-            alt_puller_speedx = el.dataset.speedx*10;
-            alt_puller_speedy = el.dataset.speedy*10; 
+            alt_puller_speedx = el.dataset.speedx*2;
+            alt_puller_speedy = el.dataset.speedy*2; 
             el.style.transform =`translateX(calc(-50% + ${-scrollval * alt_puller_speedx}px)) translateY(calc(-50% + ${scrollval * alt_puller_speedy}px`;
             //el.style.transform = `translateX(calc(-50% + ${-xValue * alt_puller_speedx}px)) translateY(calc(-50% + ${xValue * alt_puller_speedy}px`;
         }
         else{
-            let bg_speedx = el.dataset.speedx*10;
-            let bg_speedy = el.dataset.speedy*10; 
+            let bg_speedx = el.dataset.speedx*2;
+            let bg_speedy = el.dataset.speedy*2; 
             //el.style.transform = `translateX(calc(-50% + ${-scrollval * bg_speedx}px)) translateY(calc(-50% + ${-scrollval * bg_speedy}px`;
             //el.style.transform = `translateX(calc(-50% + ${-xValue * bg_speedx}px)) translateY(calc(-50% + ${-yValue * bg_speedy}px`;
         }
